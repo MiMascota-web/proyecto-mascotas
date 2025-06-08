@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinarias | TODOPET</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/Vet.css">
+    <link rel="icon" href="../Imagenes/WhatsApp Image 2025-06-07 at 7.07.07 PM.jpeg">
+    <script>
+        function showAppointmentForm(id) {
+            var form = document.getElementById(id);
+            form.style.display = 'block'; // Muestra el formulario
+        }
+
+        function confirmAppointment(id, dateId, timeId) {
+            var date = document.getElementById(dateId).value; // Obtiene la fecha
+            var time = document.getElementById(timeId).value; // Obtiene la hora
+            
+            // Validación de la información
+            if (!date || !time) {
+                alert('Por favor, completa la fecha y la hora antes de confirmar la cita.'); // Mensaje de error
+                return; // No continuar si falta información
+            }
+
+            alert('Cita confirmada para ' + date + ' a las ' + time); // Muestra alerta de confirmación
+            var form = document.getElementById(id);
+            form.style.display = 'none'; // Oculta el formulario
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">TODOPET</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#sanmartin">San Martín</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#machon">Machón</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#santajulia">Santa Julia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Lázaro">Peluvet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#trebol">Treból</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#flores">Flores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Sobre_Nosotros.html" target="_blank" style="padding: 10px 20px;">Volver al Inicio</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2 class="text-center">Encuentra tu veterinaria más cercana</h2>
+    </div>
+
+    <div class="container mt-4" id="veterinarias">
+        <div class="row">
+            <div class="col-md-4" id="sanmartin">
+                <div class="card">
+                    <img src="../Imagenes/Veterinaria San Martin.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Servicios Veterinarios San Martin</h5>
+                        <p class="card-text">Dirección: XCJQ+HX7, 27 Calle Pte, Santa Ana</p>
+                        <p class="card-text">Teléfono: 2440-0150</p>
+                        <button class="btn btn-appointment" onclick="showAppointmentForm('appointmentFormSanMartin')">Hacer Cita</button>
+                        <div class="appointment-form" id="appointmentFormSanMartin" style="display:none;">
+                            <label for="dateSanMartin">Seleccionar Fecha</label>
+                            <input type="date" id="dateSanMartin" class="form-control">
+                            <label for="timeSanMartin">Seleccionar Hora</label>
+                            <input type="time" id="timeSanMartin" class="form-control">
+                            <button class="btn btn-confirm" onclick="confirmAppointment('appointmentFormSanMartin', 'dateSanMartin', 'timeSanMartin')">Confirmar Cita</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" id="machon">
+                <div class="card">
+                    <img src="../Imagenes/Machón.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Clínica Veterinaria Machón</h5>
+                        <p class="card-text">Dirección: 4a Avenida Sur, Santa Ana</p>
+                        <p class="card-text">Teléfono: 2441-2807</p>
+                        <button class="btn btn-appointment" onclick="showAppointmentForm('appointmentFormMachon')">Hacer Cita</button>
+                        <div class="appointment-form" id="appointmentFormMachon" style="display:none;">
+                            <label for="dateMachon">Seleccionar Fecha</label>
+                            <input type="date" id="dateMachon" class="form-control">
+                            <label for="timeMachon">Seleccionar Hora</label>
+                            <input type="time" id="timeMachon" class="form-control">
+                            <button class="btn btn-confirm" onclick="confirmAppointment('appointmentFormMachon', 'dateMachon', 'timeMachon')">Confirmar Cita</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" id="santajulia">
+                <div class="card">
+                    <img src="../Imagenes/Santa Julia.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Servicios Veterinarios Santa Julia</h5>
+                        <p class="card-text">Dirección: Independencia Norte, Santa Ana</p>
+                        <p class="card-text">Teléfono: 2447-3115</p>
+                        <button class="btn btn-appointment" onclick="showAppointmentForm('appointmentFormSantaJulia')">Hacer Cita</button>
+                        <div class="appointment-form" id="appointmentFormSantaJulia" style="display:none;">
+                            <label for="dateSantaJulia">Seleccionar Fecha</label>
+                            <input type="date" id="dateSantaJulia" class="form-control">
+                            <label for="timeSantaJulia">Seleccionar Hora</label>
+                            <input type="time" id="timeSantaJulia" class="form-control">
+                            <button class="btn btn-confirm" onclick="confirmAppointment('appointmentFormSantaJulia', 'dateSantaJulia', 'timeSantaJulia')">Confirmar Cita</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" id="Lázaro">
+                <div class="card">
+                    <img src="../Imagenes/San Lázaro.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Veterinaria San Lázaro PELUVET</h5>
+                        <p class="card-text">Dirección: Santa Ana 503, Santa Ana</p>
+                        <p class="card-text">Teléfono: 7921 2562</p>
+                        <button class="btn btn-appointment" onclick="showAppointmentForm('appointmentFormPetCare')">Hacer Cita</button>
+                        <div class="appointment-form" id="appointmentFormPetCare" style="display:none;">
+                            <label for="datePetCare">Seleccionar Fecha</label>
+                            <input type="date" id="datePetCare" class="form-control">
+                            <label for="timePetCare">Seleccionar Hora</label>
+                            <input type="time" id="timePetCare" class="form-control">
+                            <button class="btn btn-confirm" onclick="confirmAppointment('appointmentFormPetCare', 'datePetCare', 'timePetCare')">Confirmar Cita</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" id="trebol">
+                <div class="card">
+                    <img src="../Imagenes/Trebol.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Veterinaria El Trébol</h5>
+                        <p class="card-text">Dirección: El Trebol, Santa Ana</p>
+                        <p class="card-text">Teléfono: 2457 5374</p>
+                        <button class="btn btn-appointment" onclick="showAppointmentForm('appointmentFormHuellaAmiga')">Hacer Cita</button>
+                        <div class="appointment-form" id="appointmentFormHuellaAmiga" style="display:none;">
+                            <label for="dateHuellaAmiga">Seleccionar Fecha</label>
+                            <input type="date" id="dateHuellaAmiga" class="form-control">
+                            <label for="timeHuellaAmiga">Seleccionar Hora</label>
+                            <input type="time" id="timeHuellaAmiga" class="form-control">
+                            <button class="btn btn-confirm" onclick="confirmAppointment('appointmentFormHuellaAmiga', 'dateHuellaAmiga', 'timeHuellaAmiga')">Confirmar Cita</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" id="flores">
+                <div class="card">
+                    <img src="../Imagenes/Flores.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Veterinaria Flores pet center</h5>
+                        <p class="card-text">Dirección: 11 Ave Norte, Santa Ana</p>
+                        <p class="card-text">Teléfono: 2406 3237</p>
+                        <button class="btn btn-appointment" onclick="showAppointmentForm('appointmentFormFelinaCanina')">Hacer Cita</button>
+                        <div class="appointment-form" id="appointmentFormFelinaCanina" style="display:none;">
+                            <label for="dateFelinaCanina">Seleccionar Fecha</label>
+                            <input type="date" id="dateFelinaCanina" class="form-control">
+                            <label for="timeFelinaCanina">Seleccionar Hora</label>
+                            <input type="time" id="timeFelinaCanina" class="form-control">
+                            <button class="btn btn-confirm" onclick="confirmAppointment('appointmentFormFelinaCanina', 'dateFelinaCanina', 'timeFelinaCanina')">Confirmar Cita</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <a href="Sobre_Nosotros.html" class="btn">Volver al inicio</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <footer>
+        &copy; 2025 TODOPET | Todos los derechos reservados | Política de privacidad
+    </footer>
+    
+</body>
+</html>

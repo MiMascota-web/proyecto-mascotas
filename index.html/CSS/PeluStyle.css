@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menú fijado */
+.navbar {
+    background-color: #f2c7d1;
+    position: fixed; /* Fija el menú en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Hace que el menú ocupe todo el ancho */
+    z-index: 1000; /* Asegura que el menú se quede encima de otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    padding: 10px 0;
+}
+
+/* Ajuste de los enlaces en el menú */
+.navbar a {
+    color: #5a3e3b !important;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+/* Espacio extra para el contenido después del menú fijo */
+body {
+    padding-top: 60px; /* Ajusta este valor según el alto de tu menú */
+}
+
+/* Encabezado */
+header {
+    background-color: #ffb3b3;
+    color: #5a3e3b;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Estilos de las tarjetas de servicio */
+.service-card {
+    margin-bottom: 20px;
+}
+
+.service-card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    color: #d68d8d;
+}
+
+.service-card p {
+    color: #5a3e3b;
+}
+
+.service-card:hover {
+    background-color: #f2e0e0;
+    cursor: pointer;
+}
+
+.service-card .btn {
+    background-color: #ffb3b3;
+    border: none;
+    color: #5a3e3b;
+}
+
+.service-card .btn:hover {
+    background-color: #f2c7d1;
+    color: white;
+}
+
+/* Sección de reserva */
+.booking-section {
+    background-color: #ffe0e0;
+    padding: 40px;
+    border-radius: 8px;
+    display: none;
+}
+
+.booking-section h2 {
+    color: #ff6f61;
+}
+
+/* Sección de contacto */
+.contact-section {
+    background-color: #f2c7d1;
+    padding: 40px;
+}
+
+/* Pie de página */
+footer {
+    background-color:  #7e7e7e59;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}

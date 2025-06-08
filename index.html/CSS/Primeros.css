@@ -1,0 +1,120 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Fuente de texto */
+    background-color: #efcfe3; /* Color de fondo rosado claro */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
+    box-sizing: border-box; /* Asegura que el tamaño de los elementos incluya el padding y el borde */
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #e27396; /* Color de fondo del encabezado */
+    padding: 15px; /* Espaciado interno */
+    color: rgb(252, 250, 250); /* Color del texto */
+    text-align: center; /* Alineación del texto al centro */
+}
+
+/* Estilo del menú de navegación */
+.menu {
+    background-color: #ea9ab2; /* Color de fondo del menú */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto al centro */
+    position: sticky; /* Fija el menú en la parte superior al hacer scroll */
+    top: 0; /* Posición superior */
+    z-index: 100; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+/* Estilo de los enlaces en el menú */
+.menu a {
+    text-decoration: none; /* Sin subrayado en los enlaces */
+    color: white; /* Color del texto de los enlaces */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    margin: 0 15px; /* Margen horizontal entre enlaces */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: 0.3s; /* Transición suave para efectos */
+}
+
+/* Efecto al pasar el ratón sobre los enlaces del menú */
+.menu a:hover {
+    background-color: white; /* Color de fondo al pasar el ratón */
+    color: #000000; /* Color del texto al pasar el ratón */
+}
+
+/* Estilo de la sección de cuidados */
+.cuidados {
+    background-color: #ffffff; /* Color de fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px auto; /* Margen superior e inferior, centrado horizontalmente */
+    width: 80%; /* Ancho de la sección */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra alrededor de la sección */
+}
+
+/* Estilo del título principal */
+h1 {
+    text-align: center; /* Alineación del texto al centro */
+    color: #faf3f3; /* Color del texto */
+}
+
+/* Estilo de los subtítulos */
+h3 {
+    color: #ff006e; /* Color del texto de los subtítulos */
+}
+
+/* Estilo de los párrafos */
+p {
+    font-size: 16px; /* Tamaño de fuente */
+    line-height: 1.6; /* Altura de línea */
+}
+
+/* Estilo de la galería */
+.galeria {
+    display: flex; /* Utiliza flexbox para el diseño */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre elementos */
+    margin: 20px; /* Margen alrededor de la galería */
+   flex-wrap: nowrap;
+}
+
+/* Estilo de las tarjetas en la galería */
+.tarjeta {
+    width: 200px; /* Ancho de cada tarjeta */
+    border: 1px solid #ccc;
+    background-color: #e2bad3; /* Color de fondo de la tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor de la tarjeta */
+    color: rgb(22, 21, 21); /* Color del texto */
+}
+
+.tarjeta img {
+    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+   height: auto;
+    display: block;
+}
+
+.descripcion {
+    padding: 15px; /* Espaciado interno de 15px alrededor de la descripción */
+}
+
+.btn {
+    display: inline-block; /* Permite que el botón se comporte como un bloque en línea */
+    padding: 10px 20px; /* Espaciado interno de 10px arriba y abajo, 20px a los lados */
+    background-color: #363663; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    text-align: center; /* Centra el texto dentro del botón */
+    text-decoration: none; /* Elimina el subrayado del texto del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    font-size: 16px; /* Tamaño de fuente del texto del botón */
+}
+
+footer {
+    background-color: #7e7e7e59; /* Color de fondo del pie de página con opacidad */
+    color: #1d0f0f; /* Color del texto en el pie de página */
+    text-align: center; /* Centra el texto en el pie de página */
+    padding: 10px; /* Espaciado interno de 10px en el pie de página */
+    margin-top: 20px; /* Margen superior de 20px para separar el pie de página del contenido anterior */
+}

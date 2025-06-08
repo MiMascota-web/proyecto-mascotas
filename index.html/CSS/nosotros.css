@@ -1,0 +1,94 @@
+body {
+    background-color: #fcfcfc;
+    padding-top: 80px; /* Ajuste para que el contenido no quede oculto por la barra */
+}
+
+.navbar-container {
+    max-width: 85%;
+    background-color: #f1d4c0;
+    border-radius: 10px;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1000; /* Para que siempre esté sobre el contenido */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.main-content {
+    background-color: #f1d4c0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    color: #961b21;
+}
+
+.subtitle {
+    color: #b36b71;
+}
+
+h3 {
+    color: #1c2125;
+}
+
+h2 {
+    color: #6c757d;
+}
+
+.card {
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.card-title {
+    color: #343a40;
+}
+
+.card-text {
+    color: #495057;
+}
+
+.card img {
+    object-fit: cover;
+    height: 270px;
+}
+
+strong {
+    font-size: 1.1em;
+}
+
+.objetivo {
+    color: #458fdf;
+}
+
+.mision {
+    color: #28a745;
+}
+
+.vision {
+    color: #e9862a;
+}
+
+footer {
+    background-color: #7e7e7e59;
+    color: #1d0f0f;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

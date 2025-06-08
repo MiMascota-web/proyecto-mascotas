@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Peluquería y Baño para Mascotas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/PeluStyle.css">
+    <link rel="icon" href="../Imagenes/WhatsApp Image 2025-06-07 at 7.07.07 PM.jpeg">
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Peluquería y Baño para Mascotas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sobre_Nosotros.html">Volver al Inicio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de bienvenida -->
+    <header>
+        <h1>Bienvenidos a la Peluquería y Baño para Mascotas</h1>
+        <p>Los mejores servicios para tu mascota, ¡reserva ahora y dale el cuidado que se merece!</p>
+    </header>
+
+    <!-- Servicios -->
+    <section id="services" class="container my-5">
+        <h2 class="text-center mb-4">Nuestras Peluquerías</h2>
+        <div class="row">
+            <!-- Peluquería 1 -->
+            <div class="col-md-4" id="Peluquería Canina El Estilo">
+                <div class="card service-card">
+                    <img src="../Imagenes/P1.jpg" class="card-img-top" alt="Peluquería 1">
+                    <div class="card-body">
+                        <h3 class="card-title">Peluquería Canina El Estilo</h3>
+                        <p class="card-text">Ofrecemos baño, corte de pelo y manicura para todo tipo de perros.</p>
+                        <button class="btn btn-outline-dark" onclick="showBookingForm('Peluquería Canina El Estilo')">Reservar Cita</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Peluquería 2 -->
+            <div class="col-md-4" id="Peluquería y Spa PetCare">
+                <div class="card service-card">
+                    <img src="../Imagenes/P2.jpg" class="card-img-top" alt="Peluquería 2">
+                    <div class="card-body">
+                        <h3 class="card-title">Peluquería y Spa PetCare</h3>
+                        <p class="card-text">Servicio de baño, corte de pelo y cuidado facial para tu mascota.</p>
+                        <button class="btn btn-outline-dark" onclick="showBookingForm('Peluquería y Spa PetCare')">Reservar Cita</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Peluquería 3 -->
+            <div class="col-md-4" id="Peluquería Casa de las Mascotas">
+                <div class="card service-card">
+                    <img src="../Imagenes/P3.jpg" class="card-img-top" alt="Peluquería 3">
+                    <div class="card-body">
+                        <h3 class="card-title">Peluquería Casa de las Mascotas</h3>
+                        <p class="card-text">Especialistas en cuidado, belleza e higiene de gatos y perros.</p>
+                        <button class="btn btn-outline-dark" onclick="showBookingForm('Peluquería Casa de las Mascotas')">Reservar Cita</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservar Cita -->
+    <section id="formulario">
+        <section id="booking" class="container booking-section" style="display: none;"> <!-- Sección para reservar citas -->
+            <h2 class="text-center mb-4">Reserva tu Cita en <span id="peluqueriaName"></span></h2>
+            <form id="bookingForm" onsubmit="return validateForm()"> <!-- Formulario para reservar cita -->
+                <div class="mb-3">
+                    <label for="petName" class="form-label">Nombre de tu mascota</label>
+                    <input type="text" class="form-control" id="petName" placeholder="Ej. Rocky" required>
+                </div>
+                <div class="mb-3">
+                    <label for="service" class="form-label">Selecciona el servicio</label> 
+                    <select class="form-select" id="service" required>
+                        <option value="">Selecciona un servicio</option>
+                        <option value="Baño">Baño para Mascotas</option>
+                        <option value="Corte">Corte de Pelo</option>
+                        <option value="Manicure">Manicure y Pedicure</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Fecha y Hora</label>
+                    <input type="datetime-local" class="form-control" id="date" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Reservar Cita</button>
+            </form>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 TODOPET | Todos los derechos reservados | Política de privacidad
+    </footer>
+
+    <!-- Enlace a Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function showBookingForm(peluqueria) {
+            document.querySelector('.booking-section').style.display = 'block';
+            document.getElementById('peluqueriaName').innerText = peluqueria;
+
+            // Desplazar a la sección del formulario
+            document.getElementById('formulario').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function validateForm() {
+            const petName = document.getElementById('petName').value.trim();
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+
+            if (!petName || !service || !date) {
+                alert("Por favor, completa todos los campos requeridos.");
+                return false; // Evita el envío del formulario
+            }
+
+            // Si todo está bien, puedes enviar el formulario
+            alert("Cita reservada con éxito!");
+            return true; // Permite el envío del formulario
+        }
+    </script>
+</body>
+</html>

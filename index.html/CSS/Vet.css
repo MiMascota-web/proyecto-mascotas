@@ -1,0 +1,76 @@
+body {
+    background-color: #f8f9fa; /* Color de fondo de la página */
+    margin: 0; /* Elimina el margen por defecto del body */
+    padding: 0; /* Elimina el padding por defecto del body */
+}
+
+/* Menú fijado */
+.navbar {
+    background-color: #ea9ab2; /* Color de fondo del menú */
+    position: fixed; /* Fija el menú en la parte superior de la página */
+    top: 0; /* Posiciona el menú en la parte superior */
+    left: 0; /* Posiciona el menú a la izquierda */
+    width: 100%; /* El menú ocupa todo el ancho de la página */
+    z-index: 1000; /* Asegura que el menú esté encima de otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional para darle profundidad al menú */
+}
+
+/* Espacio extra para el contenido después del menú fijo */
+body {
+    padding-top: 60px; /* Ajusta este valor si el menú tiene un tamaño diferente */
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important; /* Color del texto de la marca y los enlaces del menú, forzando el color blanco */
+}
+
+/* Estilos para las tarjetas */
+.card {
+    margin-bottom: 20px; /* Espacio inferior entre las tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las tarjetas */
+}
+
+.card img {
+    object-fit: cover; /* Asegura que la imagen cubra el área de la tarjeta */
+    height: 270px; /* Altura fija para las imágenes de las tarjetas */
+}
+
+/* Botón para la cita */
+.btn-appointment {
+    margin-top: 10px; /* Espacio superior para el botón de cita */
+    background-color: #007bff; /* Color de fondo del botón de cita */
+    color: white; /* Color del texto del botón de cita */
+}
+
+/* Formulario de cita (inicialmente oculto) */
+.appointment-form {
+    display: none; /* Oculta el formulario de cita por defecto */
+    margin-top: 20px; /* Espacio superior para el formulario cuando se muestre */
+}
+
+/* Botón de confirmación */
+.btn-confirm {
+    margin-top: 10px; /* Espacio superior para el botón de confirmación */
+    background-color: #28a745; /* Color de fondo del botón de confirmación */
+    color: white; /* Color del texto del botón de confirmación */
+}
+
+/* Botones generales */
+.btn {
+    display: inline-block; /* Permite que el botón se comporte como un bloque en línea */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    background-color: #f3aad7; /* Color de fondo general de los botones */
+    color: white; /* Color del texto de los botones */
+    text-align: center; /* Centra el texto dentro del botón */
+    text-decoration: none; /* Elimina el subrayado del texto */
+    border-radius: 5px; /* Bordes redondeados para los botones */
+    font-size: 16px; /* Tamaño de fuente del texto en los botones */
+}
+
+footer {
+    background-color:  #7e7e7e59; /* Color de fondo del pie de página */
+    color: #dae9b8(29, 15, 15); /* Color del texto del pie de página (parece un error, ya que debería ser un color hexadecimal o rgb) */
+    text-align: center; /* Centra el texto en el pie de página */
+    padding: 10px; /* Espaciado interno del pie de página */
+    margin-top: 20px; /* Espacio superior para el pie de página */
+}
